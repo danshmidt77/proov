@@ -1,9 +1,11 @@
 import webpack from 'webpack';
 import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
+console.log('webpack', __dirname);
 export default {
   debug: true,
-  devtool: 'cheap-module-eval-source-map',
+  devtool: ['cheap-module-eval-source-map', 'source-map'],
   noInfo: false,
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
@@ -21,11 +23,14 @@ export default {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new ExtractTextPlugin("styles.css")
   ],
   module: {
     loaders: [
-            {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']}
+            {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['react-hot', 'babel']},
+            {test: /\.scss$/,  loader: ExtractTextPlugin.extract(
+    "style",
+    "css!sass")}
     ]
   }
 };
