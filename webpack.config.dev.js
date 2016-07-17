@@ -2,7 +2,6 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-console.log('webpack', __dirname);
 export default {
   debug: true,
   devtool: ['cheap-module-eval-source-map', 'source-map'],
@@ -16,7 +15,7 @@ export default {
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'app.js'
+    filename: 'app.[ch].js'
   },
   devServer: {
     contentBase: './src'
