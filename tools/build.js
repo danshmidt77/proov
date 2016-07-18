@@ -6,13 +6,14 @@ process.env.NODE_ENV = 'production'; // this assures the Babel dev config (for h
 
 console.log('Generating minified bundle for production. This will take a moment...'.blue);
 
-webpack(webpackConfig).run((err, stats) =>{
+export default webpack(webpackConfig).run((err, stats) =>{
   if(err){
     console.log(err.bold.red);
     return 1;
   }
 
   const jsonStats = stats.toJson();
+
 
   if (jsonStats.hasErrors) {
     return jsonStats.errors.map(error => console.log(error.red));
@@ -25,6 +26,5 @@ webpack(webpackConfig).run((err, stats) =>{
 
   console.log(`Webpack stats: ${stats}`);
   console.log('build success'.green);
-
   return 0;
 });

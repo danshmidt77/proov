@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import path from 'path';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
   debug: true,
@@ -15,21 +14,18 @@ export default {
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'app.[ch].js'
+    filename: '[name].js'
   },
   devServer: {
     contentBase: './src'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin("styles.css")
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
             {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['react-hot', 'babel']},
-            {test: /\.scss$/,  loader: ExtractTextPlugin.extract(
-    "style",
-    "css!sass")}
+            {test: /\.scss$/, loaders: ["style", "css", "sass"]}
     ]
   }
 };
