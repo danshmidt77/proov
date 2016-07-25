@@ -1,0 +1,20 @@
+{
+  "industry": [
+    {
+      "id": "01",
+      "label": "Accounting"
+    },
+    {
+      "id": "02",
+      "label": "Airlines"
+    },
+    {
+      "id": "03",
+      "label": "Animation"
+    },
+    {
+      "id": "04",
+      "label": "Apparel"
+    }
+  ]
+}

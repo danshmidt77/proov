@@ -1,1 +1,3 @@
 export const LOAD_COURSES_SUCCESS = 'LOAD_COURSES_SUCCESS';
+export const SET_PANET = 'SET_PLANET';
+export const FETCH_INDUSTRY = 'FETCH_INDUSTRY';
