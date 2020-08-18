@@ -1,0 +1,46 @@
+{
+	"defaultSeverity": "warning",
+	"rules": {
+		"indentation": "tab",
+		"color-hex-case": "lower",
+		"color-no-invalid-hex": true,
+		"font-family-name-quotes": "always-unless-keyword",
+		"function-blacklist": ["calc"],
+		"function-calc-no-unspaced-operator": true,
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
+		"string-quotes": "double",
+		"length-zero-no-unit": true,
+		"no-duplicate-selectors": true,
+		"max-empty-lines": 2,
+		"no-eol-whitespace": true,
+		"no-missing-end-of-source-newline": [true, { "severity": "warning" }],
+		"no-unsupported-browser-features": [true, {
+			"browsers": [
+				'Explorer >= 11',
+				'Last 2 Chrome versions',
+				'Last 2 Firefox versions',
+				'Safari >= 9'
+			],
+			"ignore": ["rem"], "severity": "warning"
+		}],
+		"selector-type-case": "lower",
+		"selector-pseudo-element-no-unknown": true,
+		"block-closing-brace-space-before": "always-single-line",
+		"block-opening-brace-space-before": "always",
+		"declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates"] }],
+		#"unit-blacklist": ["em"],
+		"unit-case": "lower",
+		"unit-no-unknown": true,
+		"function-parentheses-space-inside": "never",
+		"function-name-case": "lower",
+		"function-linear-gradient-no-nonstandard-direction": true,
+		"function-url-quotes": "always",
+		"value-list-comma-space-after": "always-single-line",
+		"value-list-comma-space-before": "never",
+		"function-comma-space-after": "always",
+		"function-comma-space-before": "never",
+		"declaration-block-properties-order": ["composes"],
+		#"stylelint-disable-reason": "always-after"
+	}
+}
