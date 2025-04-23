@@ -30,7 +30,7 @@
     "@babel/polyfill": "^7.2.5",
     "@proov/amcharts3": "^3.21.12",
     "aws-sdk": "^2.259.1",
-    "canvg": "^1.0.0",
+    "canvg": "^4.0.3",
     "canvg-browser": "^1.0.0",
     "d3": "^4.13.0",
     "d3-3d": "0.0.9",
